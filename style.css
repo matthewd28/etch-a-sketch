@@ -17,18 +17,22 @@ body {
 
 #container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 100px;
+    flex-direction: column;
 }
 
 #row {
-    
+    display: flex;
 }
 
 #square {
     background-color: hsl(0, 0%, 80%);
     flex: 1;
-    padding: 50px;
+    padding: 10px;
+}
+
+#square:hover {
+    background-color: hsl(0, 0%, 75%);
 }
 
 button {
