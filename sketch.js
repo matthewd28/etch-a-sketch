@@ -5,13 +5,21 @@ function createTiles(size) {
         const row = document.createElement("div")
         row.setAttribute("id", "row")
     
+        const squareSize = container.clientWidth / size
         for (let j = 0; j < size; j++) {
             const square = document.createElement("div")
             square.setAttribute("id", "square")
+            square.style.width = `${squareSize}px`
+            square.style.height = `${squareSize}px`
+            
+
             row.appendChild(square)
+
+            square.addEventListener("mouseover", () => {
+                square.style.backgroundColor = "red"
+            })
         }
     
-        
         container.appendChild(row)
     }
 }
@@ -32,12 +40,20 @@ const size = document.querySelector("#size")
 
 generateButton.addEventListener("click", () => {
     if (size.value && size.value > 0 && size.value <= 100) {
-        console.log("entered")
         removeTiles()
         createTiles(size.value)
     }
-    
-    
 })
 
-createTiles(4)
+size.addEventListener("keypress", (event) => {
+    if (event.key == "Enter") {
+        if (size.value && size.value > 0 && size.value <= 100) {
+            removeTiles()
+            createTiles(size.value)
+        }
+    }
+})
+
+
+
+createTiles(16)
