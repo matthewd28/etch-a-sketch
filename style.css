@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+#config {
+    display: flex;
+    background-color: hsl(0, 0%, 69%);
+    margin: 100px;
+    padding: 20px;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 15px;
+    flex: 1;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#row {
+    
+}
+
+#square {
+    background-color: hsl(0, 0%, 80%);
+    flex: 1;
+    padding: 50px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+
+}
